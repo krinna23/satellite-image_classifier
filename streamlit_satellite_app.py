@@ -388,6 +388,8 @@ elif page == "Classification":
             for i, file in enumerate(uploaded_files):
                 st.write(f"📸 {file.name}")
                 
+                st.image(file, caption=f"🖼️ Preview: {file.name}", use_column_width=True)
+                
                 # Simulate processing
                 progress_bar = st.progress(0)
                 for j in range(100):
